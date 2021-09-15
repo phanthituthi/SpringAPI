@@ -19,16 +19,16 @@ public class EmployeeController {
         return employeeService.findAll();
     }
 
-    @GetMapping("/getEmployeeById/{id}")
+   @GetMapping("/getEmployeeById/{id}")
     public Employee getEmployeeById(@PathVariable("id") int id) {
-        return employeeService.getEmployee(id);
+        return employeeService.getEmployee( id);
     }
 
     @PostMapping("/addEmployee")
     public void addEmployee(Employee employee){
         employee = new Employee("vu","dang","vudang@gmail.com");
-        employeeService.createEmployee(employee);
-    }
+      employeeService.createEmployee(employee);
+  }
     @GetMapping("/deleteEmployeeById/{id}")
     public void deleteEmployeeById(@PathVariable("id") long id){
         employeeService.deleteById(id);

@@ -1,7 +1,7 @@
 package com.iuh.SpringAPI.entity;
 
 
-import jdk.jfr.DataAmount;
+
 import lombok.*;
 
 import javax.persistence.*;
@@ -15,16 +15,10 @@ import javax.persistence.*;
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Long id;
 
-    @Column(name = "firstName")
+    private long id;
     private String firstName;
-
-    @Column(name = "lastName")
     private String lastName;
-
-    @Column(name = "email")
     private String email;
 
     public Long getId() {
@@ -50,13 +44,11 @@ public class Employee {
     public void setEmail(String email) {
         this.email = email;
     }
-
     public Employee(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
     }
-
     public Employee() {
 
     }
